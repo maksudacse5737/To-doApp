@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            padding:10px;
+            border:2px solid black;
+            font-size: 25px;
+            text-decoration: none;
+            list-style-type: none;
+            margin:15px;
+        }
+        li{
+            padding:20px;
+        }
+        button {
+            font-size: 20px;
+            margin:20px;
+            padding:5px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="font-size: 80px;font: bold;text-align: center;">To Do Application</h2>
+    <form id="taskadd" style="text-align: center;
+    font-size: 25px;
+    margin:20px;
+    padding:5px;">
+        <label for="new_task">Add new task</label>
+        <input type="text" id="inputadd" style="padding:5px;">
+        <input id="addbutton" type="submit" style=" font-size: 20px;" value="Click to add task">
+    </form>    
+    <h1 style="margin-left:470px;margin-top:80px">Incomplete division</h1>
+<div id="container" style="display: flex;flex-direction: row;gap:200px;justify-content: center;">
+    <ul id="incomp_ul">
+        <li id="items" style="display: flex;flex-direction: row;gap:20px;padding:20px;justify-content: center;">
+            <input id="check" type="checkbox"><label id="labels" for="task1">Task 1</label>
+        </li>
+    <li id="items" style="display: flex;flex-direction: row;gap:20px;;padding:20px">
+        <input id="check" type="checkbox"><label id="labels" for="task2">Task 2</label>
+    </li>
+        <li id="items" style="display: flex;flex-direction: row;gap:20px;">
+            <input id="check" type="checkbox"><label id="labels" for="task3">Task 3</label>
+        </li>
+    </ul>
+    <div id="complete_div">
+        <h1>Complete division</h1>
+        <ul>
+            <li id="deletelist" >Task 1<button id="deletebtn" class="delete">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="app2.js"></script>
+</body>
+</html>
