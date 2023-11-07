@@ -17,17 +17,17 @@ var addtask=function(event){
     event.preventDefault()
     let incomp_listitem=createTask(textinput.value)
     incomplete_ul.appendChild(incomp_listitem)
-    textinput.value=''
+    textinput.value='' 
     bindincomplete(incomp_listitem,completeTask)
 }
 var completeTask=function(){
     var listitem=this.parentNode
-    var deletebuttons=document.createElement('button')  
+    var deletebuttons=document.createElement('button')   
     deletebuttons.className='delete'
-    deletebuttons.innerText='Delete'
+    deletebuttons.innerText='Delete' 
     listitem.appendChild(deletebuttons)
     var checkboxs=listitem.querySelector('input[type="checkbox"]')
-    checkboxs.remove()
+    checkboxs.remove() 
     complete_ul.appendChild(listitem)
     bindcomplete(listitem,deleteTask)
     if(incomplete_ul.children.length==0){
