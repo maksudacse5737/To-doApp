@@ -1,0 +1,22 @@
+// Declarative //
+pipeline {
+    agent any
+    stages {
+        stage('Cloning code') {
+            steps {
+                echo 'cloning..'
+                git url:"https://github.com/maksudacse5737/To-doApp.git", branch: "main"
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'building..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                  // Archive the built artifacts
+publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, includes: 'todoapp.html', keepAll: true, reportDir: '', reportFiles: 'todoapp.html', reportName: 'RCov Report', reportTitles: '', useWrapperFileDirectly: true])            }
+        }
+    }
+}
